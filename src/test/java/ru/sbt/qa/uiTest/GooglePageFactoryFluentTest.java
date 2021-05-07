@@ -1,6 +1,10 @@
 package ru.sbt.qa.uiTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
+import io.qameta.allure.TmsLink;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -27,6 +31,10 @@ public class GooglePageFactoryFluentTest {
         driver.get("https://google.com");
     }
 
+    @Epic("Отображение главного меню")
+    @Feature("Тест с использованием Fluent")
+    @Story("Как тестировщик, я должен знать что можно писать Fluent тесты")
+    @TmsLink("TMS-2")
     @Test
     public void pageFactoryTest() {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
